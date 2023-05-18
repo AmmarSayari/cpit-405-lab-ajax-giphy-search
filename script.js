@@ -33,7 +33,7 @@ function fetchGiphyAPI_UsingFetch(keyword) {
     }
     var url = "https://api.giphy.com/v1/gifs/search";
     var apiKey = "lTJZhMJyq9oKMS96OlJIrtTgOLwc8g1r";
-    var params = "api_key=" + apiKey + "&limit=5&q=" + encodeURIComponent(keyword);
+    var params = "api_key=" + apiKey + "&limit=9&q=" + encodeURIComponent(keyword);
     var requestOptions = {
         method: 'GET'
     };
@@ -57,7 +57,7 @@ function fetchGiphyAPI_UsingXHR(keyword) {
     }
     var url = "https://api.giphy.com/v1/gifs/search";
     var apiKey = "lTJZhMJyq9oKMS96OlJIrtTgOLwc8g1r";
-    var params = "api_key=" + apiKey + "&limit=5&q=" + encodeURIComponent(keyword);
+    var params = "api_key=" + apiKey + "&limit=9&q=" + encodeURIComponent(keyword);
     var xhr = new XMLHttpRequest();
     // console.log(this); this->document
     xhr.addEventListener("readystatechange", function () {
@@ -84,7 +84,7 @@ function processResponse(resp) {
 async function fetchGiphyAPI_UsingFetchAsyncAwait(keyword) {
     var url = "https://api.giphy.com/v1/gifs/search";
     var apiKey = "lTJZhMJyq9oKMS96OlJIrtTgOLwc8g1r";
-    var params = "api_key=" + apiKey + "&limit=5&q=" + encodeURIComponent(keyword);
+    var params = "api_key=" + apiKey + "&limit=9&q=" + encodeURIComponent(keyword);
     if (!keyword) {
         return;
     }
